@@ -20,32 +20,53 @@ The dataset contains the following variables:
 13.Furnishing Status: Indicates if the house is furnished (categories: Furnished, Semi-furnished, or Unfurnished). 
 Steps Taken: 
 1.Exploratory Data Analysis (EDA):
-Uni-variate Analysis:
-Performed analysis for all variables and visualised their distributions.
-Below are the histograms of the continuous numerical variables before and after log transformations.
-
-					
+- Uni-variate Analysis:
+- Performed analysis for all variables and visualised their distributions.
+- Below are the histograms of the continuous numerical variables before and after log transformations.
+
+
+![Price and Area Histograms before Log Transformation](images/price_and_area_hist_before_log_trans.png)
+
+
+![Price and Area Histograms after log Transformation](images/price_and_area_hist_after_log_trans.png)
+
+
+
 We can see the changes in the spread of the data after the log transformations. Though it is not a perfectly normal distribution but the transformation helped center the data and make it more symmetric.
 
-Outlier Detection:
-Identified outliers using boxplots.
+- Outlier Detection:
+	- Identified outliers using boxplots.
+
+
+![Box Plots of Price and Area](images/boxplot_of_price_and_area.png)
+
 
 We can observe outliers, such as homes priced over 9 million and those with square footage larger than 8,000 square feet. Additionally, there is a significant jump in the outliers from 14,000 to 16,000 square feet.
 
-Bi-variate Analysis:
-Scatterplot to study the relationship between Area and Price.
-
+-Bi-variate Analysis:
+-Scatterplot to study the relationship between Area and Price.
 
-Categorical Variable Analysis: Visualised relationships between categorical variables and Price using barplots.
-
 
-Multivariate Analysis:
-Correlation heatmap to identify key relationships among variables.
+![Scatterplot of area and price](images/scatterplot_of_area_price.png)
+
+
+- Categorical Variable Analysis: Visualised relationships between categorical variables and Price using barplots.
+
+  
+![barplots of categorical variables vs price](images/barplots_of_categorical_variables_vs_price.png)
+
+
+- Multivariate Analysis:
+- Correlation heatmap to identify key relationships among variables.
 
 2.Feature Engineering:
 a)Created a new feature Total Rooms by combining bedrooms, bathrooms, and guestroom.
 b)Updated the correlation heatmap to reflect the new feature.
 c)Heatmap including the Total Rooms feature.	
+
+
+![Heatmap including the Total Rooms feature](images/heatmap_with_total_rooms.png)
+
 
 3.Data Preprocessing:
 a)  Converted categorical variables to numerical using .map() and created dummy variables.
@@ -63,18 +84,18 @@ iii.Removed the three least important features and retrained the model.
 iv.Built a Random Forest model with log transformations and polynomial features.
 v.Barplot of feature importances from Random Forest models is shown below:
 
-
+![Barplot of feature importances](images/feature_importance_ranking.png)
 
 5.Model Comparison: Compared the performance of all models using a summary table created in Jupyter Notebook to highlight R² and MSE values.
 
 Technologies and Tools Used:
-Programming Language: Python.
-Libraries: Pandas, NumPy, Seaborn, Matplotlib, Scikit-learn.
-Environment: Jupyter Notebook.
+- Programming Language: Python.
+- Libraries: Pandas, NumPy, Seaborn, Matplotlib, Scikit-learn.
+- Environment: Jupyter Notebook.
 Key Insights and Results: 
-Area was consistently identified as the most influential feature for predicting Price.
-Feature engineering and log transformations significantly improved model performance.
-Random Forest models generally performed well but required extensive tuning to match Ridge Regression results. 
+- Area was consistently identified as the most influential feature for predicting Price.
+- Feature engineering and log transformations significantly improved model performance.
+- Random Forest models generally performed well but required extensive tuning to match Ridge Regression results. 
 Final Verdict:
 The best-performing model was Ridge Regression with GridSearchCV, log transformations, and polynomial features. This model achieved the lowest test MSE (0.062) and the highest R² (0.679), making it the most reliable predictor of housing prices in this analysis. 
 Next Steps:
