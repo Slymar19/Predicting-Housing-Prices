@@ -1,9 +1,9 @@
-Housing Price Prediction Project
-Objective:
+# Housing Price Prediction Project
+## Objective:
 The goal of this project was to predict house prices accurately using various regression models and feature engineering techniques. This project demonstrates a detailed approach to model development, evaluation, and improvement.
-Problem Statement:
+## Problem Statement:
 House prices depend on numerous factors such as property size, location, and amenities. Predicting these prices accurately is crucial for stakeholders in the real estate sector. This project aims to explore the relationships among these features, develop robust models, and identify the best-performing one
-Dataset Overview:
+## Dataset Overview:
 The dataset contains the following variables:
 1.Price: The target variable representing the price of the house (continuous variable).
 2.Area: The size of the property in square feet.
@@ -19,7 +19,7 @@ The dataset contains the following variables:
 12.Prefarea: Whether the house is located in a preferred area (categorical: Yes/No).
 13.Furnishing Status: Indicates if the house is furnished (categories: Furnished, Semi-furnished, or Unfurnished). 
 Steps Taken: 
-1.Exploratory Data Analysis (EDA):
+### 1.Exploratory Data Analysis (EDA):
 - Uni-variate Analysis:
 - Performed analysis for all variables and visualised their distributions.
 - Below are the histograms of the continuous numerical variables before and after log transformations.
@@ -68,11 +68,11 @@ c)Heatmap including the Total Rooms feature.
 ![Heatmap including the Total Rooms feature](images/heatmap_with_total_rooms.png)
 
 
-3.Data Preprocessing:
+### 3.Data Preprocessing:
 a)  Converted categorical variables to numerical using .map() and created dummy variables.
 b)  Scaled selected numerical features for model training.
 
-4.Model Development and Evaluation: 
+### 4.Model Development and Evaluation: 
 a)Baseline Model: Trained a Linear Regression model and evaluated it using R² and MSE.
 b)Improvement:
 i.  Applied Polynomial Features and Ridge Regression, tuned using GridSearchCV with cross-validation.
@@ -86,7 +86,7 @@ v.Barplot of feature importances from Random Forest models is shown below:
 
 ![Barplot of feature importances](images/feature_importance_ranking.png)
 
-5.Model Comparison: Compared the performance of all models using a summary table created in Jupyter Notebook to highlight R² and MSE values.
+### 5.Model Comparison: Compared the performance of all models using a summary table created in Jupyter Notebook to highlight R² and MSE values.
 
 Technologies and Tools Used:
 - Programming Language: Python.
